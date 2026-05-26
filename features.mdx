@@ -1,0 +1,84 @@
+---
+title: Core Features
+description: Detailed walkthrough of ParyatechOS core features including pipeline management, vendor database, and automated workflows.
+---
+
+## Overview
+
+ParyatechOS unifies every part of your travel agency operations into a single workspace. You manage active pipelines, maintain a structured vendor database, track customer queries, generate proposals, and automate follow-ups without switching between spreadsheets and messaging apps.
+
+## Pipeline Management
+
+You track every deal through customizable stages. The system automatically updates status based on actions like sending proposals or receiving payments.
+
+<Columns cols={3}>
+  <Card title="Active" icon="play-circle" href="#pipeline-management">
+    Deals currently being worked on.
+  </Card>
+  <Card title="Negotiation" icon="message-circle" href="#pipeline-management">
+    Clients reviewing proposals.
+  </Card>
+  <Card title="Closed" icon="check-circle" href="#pipeline-management">
+    Won or lost itineraries.
+  </Card>
+</Columns>
+
+Use the following steps to advance a deal:
+
+<Steps>
+  <Step title="Create Pipeline">
+    Add a new trip request from the dashboard.
+  </Step>
+  <Step title="Assign Stages">
+    Move the deal between stages as conversations progress.
+  </Step>
+  <Step title="Set Reminders">
+    Attach tasks and due dates to each stage.
+  </Step>
+</Steps>
+
+## Vendor Database
+
+You keep all suppliers organized with contact details, pricing tiers, and availability notes. Search and filter vendors by destination, service type, or rating.
+
+<Tabs>
+  <Tab title="List View" icon="list">
+    Browse vendors in a searchable table with quick filters.
+  </Tab>
+  <Tab title="Grid View" icon="grid">
+    Visual cards showing vendor logos and key metrics.
+  </Tab>
+</Tabs>
+
+## Query Tracking
+
+Every customer inquiry lands in a structured queue. You capture requirements such as traveler count, budget range, travel dates, and special requests.
+
+<Callout kind="info">
+  Tag queries with labels like `Luxury`, `Corporate`, or `Family` to route them to the right team member automatically.
+</Callout>
+
+## Creating Proposals
+
+Generate professional proposals directly from pipeline data. The system pulls vendor rates and itinerary details into formatted documents.
+
+````bash
+curl -X POST https://api.example.com/proposals \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "pipeline_id": "pl_9k2m4p",
+    "client_email": "sharma.family@email.com",
+    "template": "luxury-bali"
+  }'
+````
+
+## Automated Workflows
+
+You set rules that trigger actions without manual intervention. Examples include sending follow-up emails after three days of inactivity or creating tasks when a proposal reaches the negotiation stage.
+
+<Expandable title="Example Workflow Rule" default-open="false">
+  When a proposal status changes to `Sent`, automatically schedule a follow-up task for 48 hours later and notify the assigned agent.
+</Expandable>
+
+These features work together so you spend less time on coordination and more time closing trips.

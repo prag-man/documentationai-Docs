@@ -1,0 +1,77 @@
+---
+title: Changelog
+description: Track recent updates and new features released in ParyatechOS.
+---
+
+## Latest Updates
+
+Stay informed about the newest capabilities in ParyatechOS. Each release focuses on streamlining travel agency workflows, from query management to proposal delivery.
+
+<Callout kind="info">
+  We recommend reviewing migration notes before upgrading to avoid disruptions in your active pipelines.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Real-time collaboration on itineraries lets multiple team members edit proposals simultaneously.
+- Integrated vendor directory now pulls live availability from over 200 partners directly into your workspace.
+
+## Improvements
+
+- Dashboard performance increased by 40 percent when loading large corporate group queries.
+- Proposal export now supports branded PDF templates with custom logos and terms.
+
+## Bug Fixes
+
+- Fixed an issue where client avatars failed to display in the active pipelines view.
+- Resolved sync errors between the CRM and query tracking modules.
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+## New Features
+
+- Automated waitlist notifications keep agents updated when slots open for high-demand trips like Maldives water villas.
+- New conversion analytics dashboard shows pipeline health with metrics such as `{conversionRate}` and proposal acceptance rates.
+
+## Bug Fixes
+
+- Corrected negotiation status updates that were not reflecting in real time for Sharma Family Bali Trip type records.
+- Fixed mobile responsiveness issues on the proposal sent view.
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+## Initial Release
+
+- Unified CRM, vendors, queries, and proposals in a single editorial-grade workspace.
+- Core pipeline tracking with status indicators for Proposal Sent, In Negotiation, and Waitlist.
+
+## Breaking Changes
+
+- The legacy spreadsheet import format is no longer supported. Migrate your existing data using the new CSV template before upgrading.
+
+## Migration Notes
+
+Run the following command in your terminal to prepare your data:
+
+````bash
+paryatech migrate --from-spreadsheet data.csv --to-os
+````
+</Update>
+
+## What's Next
+
+We are actively building features based on feedback from agencies like TRAVIO and VOYAGER.
+
+<Columns cols={2}>
+  <Card title="Request Features" icon="message-circle" href="#contact">
+    Share your ideas for the next release.
+  </Card>
+  <Card title="View Roadmap" icon="map" href="#roadmap">
+    See planned improvements for query and proposal tools.
+  </Card>
+</Columns>
+
+<Expandable title="Need help with an older version?" default-open="false">
+  Contact support at support@paryatech.in with your current version number. We provide migration assistance for all releases.
+</Expandable>
